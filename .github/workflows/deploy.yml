@@ -22,8 +22,12 @@ jobs:
       - name: Build
         run: bun run build
         
+      - name: Add .nojekyll file
+        run: touch build/.nojekyll
+        
       - name: Deploy
         uses: JamesIves/github-pages-deploy-action@v4
         with:
           folder: build
-          branch: gh-pages
+          branch: main # Deploy to main for username.github.io sites
+          clean: true
