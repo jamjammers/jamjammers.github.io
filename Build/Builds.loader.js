@@ -1,5 +1,4 @@
 function createUnityInstance(t, n, d) {
-    let webgpuVersion = 0;
     function c(e, t) {
         if (!c.aborted && n.showBanner) return "error" == t && (c.aborted = !0), n.showBanner(e, t);
         switch (t) {
@@ -17,7 +16,7 @@ function createUnityInstance(t, n, d) {
         void 0 !== r && r || (console.warn('Config option "' + t + '" is missing or empty. Falling back to default value: "' + n + '". Consider updating your WebGL template to include the missing config option.'), e[t] = n)
     } d = d || function () { };
     var o, m = {
-        canvas: t, webglContextAttributes: { preserveDrawingBuffer: !1, powerPreference: 2 }, wasmFileSize: 49246488, cacheControl: function (e) { return e == m.dataUrl || e.match(/\.bundle/) ? "must-revalidate" : "no-store" }, streamingAssetsUrl: "StreamingAssets", downloadProgress: {}, deinitializers: [], intervals: {}, setInterval: function (e, t) {
+        canvas: t, webglContextAttributes: { preserveDrawingBuffer: !1, powerPreference: 2 }, wasmFileSize: 49248643, cacheControl: function (e) { return e == m.dataUrl || e.match(/\.bundle/) ? "must-revalidate" : "no-store" }, streamingAssetsUrl: "StreamingAssets", downloadProgress: {}, deinitializers: [], intervals: {}, setInterval: function (e, t) {
             e = window.setInterval(e, t);
             return this.intervals[e] = !0, e
         }, clearInterval: function (e) { delete this.intervals[e], window.clearInterval(e) }, preRun: [], postRun: [], print: function (e) { console.log(e) }, printErr: function (e) { console.error(e), "string" == typeof e && -1 != e.indexOf("wasm streaming compile failed") && (-1 != e.toLowerCase().indexOf("mime") ? c('HTTP Response Header "Content-Type" configured incorrectly on the server for file ' + m.codeUrl + ' , should be "application/wasm". Startup time performance will suffer.', "warning") : c('WebAssembly streaming compilation failed! This can happen for example if "Content-Encoding" HTTP header is incorrectly enabled on the server for file ' + m.codeUrl + ", but the file is not pre-compressed on disk (or vice versa). Check the Network tab in browser Devtools to debug server header configuration.", "warning")) }, locateFile: function (e) { return "build.wasm" == e ? this.codeUrl : e }, disabledCanvasEvents: ["contextmenu", "dragstart"]
