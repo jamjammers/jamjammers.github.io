@@ -5,8 +5,9 @@
   "type": "module",
   "scripts": {
     "dev": "vite dev",
-    "build": "vite build",
+    "build": "vite build && echo \"6ea01727ab801a992c59759f6f2d2f5df6079ed1939c36f2157cf9dfc.ftcscoring.app\" > ./build/CNAME",
     "preview": "vite preview",
+    "deploy": "bun run build && gh-pages -d build",
     "prepare": "svelte-kit sync || echo ''",
     "check": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json",
     "check:watch": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json --watch",
