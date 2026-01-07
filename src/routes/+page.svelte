@@ -1,6 +1,7 @@
 <script>
   import Game from './Game.svelte';
 </script>
+<Game/>
 <br>
 <a href="UnityPlayer0.1.1.zip" download >Click me to install the Analysis Rhythm Game (windows)</a> <br>
 <br>
